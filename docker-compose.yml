@@ -29,6 +29,8 @@ x-airflow-common: &airflow-common
     AIRFLOW__CORE__DEFAULT_TIMEZONE: America/Sao_Paulo
     AIRFLOW__WEBSERVER__DEFAULT_UI_TIMEZONE: America/Sao_Paulo
     _PIP_ADDITIONAL_REQUIREMENTS: ''
+    AIRFLOW__WEBSERVER__WEB_SERVER_WORKER_TIMEOUT: '300'
+    AIRFLOW__WEBSERVER__WORKERS: '2'
   volumes:
     - ./dags:/opt/airflow/dags
     - ./logs:/opt/airflow/logs
