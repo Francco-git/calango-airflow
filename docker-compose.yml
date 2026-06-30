@@ -33,6 +33,8 @@ x-airflow-common: &airflow-common
     AIRFLOW__WEBSERVER__WORKERS: '2'
     AIRFLOW__LOGGING__LOGGING_LEVEL: 'INFO'
     AIRFLOW__CORE__COLORED_CONSOLE_LOG: 'False'
+    AIRFLOW__LOGGING__REMOTE_LOGGING: 'False'
+    AIRFLOW__LOGGING__LOG_PROCESSOR_FILENAME_TEMPLATE: ''
   volumes:
     - ./dags:/opt/airflow/dags
     - ./logs:/opt/airflow/logs
